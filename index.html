@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>Countdown</title>
+
+    <link href="/css/fw.css" rel="stylesheet">
+    <link href="/css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <section class="hero is-fullheight is-light" id="init">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <h1 class="title is-size-1" id="hourglass">⏳</h1>
+                <h1 class="title is-size-1">Countdown</h1>
+                <h1 class="subtitle is-size-5">By Sam Easton</h1>
+                <p id="statusText">Getting things ready...</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="hero is-fullheight is-light hidden" id="timerApp">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <div class="box countDownBox">
+                    <h1 class="title is-size-1 time"><span id="hours">00</span>:<span id="minutes">00</span>:<span
+                            id="seconds">00</span></h1>
+                </div>
+
+                <div class="box selectionBox">
+                    <a class="button is-success has-text-light is-large" onclick="startClock()" id="start">Start</a>
+                    <a class="button is-danger is-large" onclick="pause()" id="pause">Pause</a>
+                    <hr>
+                    <a class="button is-large" onclick="addTime(60)">+1 minute</a>
+                    <a class="button is-large" onclick="addTime(300)">+5 minutes</a>
+                    <a class="button is-large" onclick="addTime(600)">+10 minutes</a>
+                    <div class="small-spacer"></div>
+                    <a class="button is-large" onclick="addTime(1800)">+30 minutes</a>
+                    <a class="button is-large" onclick="addTime(3600)">+1 hour</a>
+
+                    <div class="small-spacer"></div>
+                    <div class="small-spacer"></div>
+                    <div class="small-spacer"></div>
+
+                    <a class="button is-fullwidth is-large" id="clear" onclick="clearTime()">Clear</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="/js/handler.js"></script>
+</body>
+
+</html>
